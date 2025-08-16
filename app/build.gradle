@@ -1,7 +1,8 @@
 apply plugin: 'com.android.application'
-apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'android-aspectjx'
-apply from: 'jacoco.gradle'
+apply plugin: 'org.greenrobot.greendao'
+
+//apply from: 'jacoco.gradle'
 //apply from: this.project.file("releaseinfo.gradle")
 apply plugin: 'me.ele.lancet'
 //apply from: project.file('plugin-bytex.gradle')
@@ -9,8 +10,8 @@ apply plugin: 'me.ele.lancet'
 
 android {
     ndkVersion '21.4.7075529'
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
     signingConfigs {
         release {
             storeFile file(RELEASE_STORE_FILE)
@@ -59,12 +60,12 @@ android {
         }
     }
 
-    testOptions {
-        unitTests {
-            // Fix unit test resources not included with AS3
-            includeAndroidResources = true
-        }
-    }
+//    testOptions {
+//        unitTests {
+//            // Fix unit test resources not included with AS3
+//            includeAndroidResources = true
+//        }
+//    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

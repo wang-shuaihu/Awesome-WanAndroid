@@ -4,6 +4,18 @@ apply from: "config.gradle"
 buildscript {
     ext.plugin_version="0.1.4"
     repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/apache-snapshots'
+        }
         google()
         jcenter()
         mavenCentral()
@@ -11,12 +23,12 @@ buildscript {
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'com.android.tools.build:gradle:4.0.0'
         classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.1'
-        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.4'
+        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.10'
         classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
         classpath 'me.tatarka:gradle-retrolambda:3.7.0'
-        classpath 'me.ele:lancet-plugin:1.0.5'
+        classpath 'me.ele:lancet-plugin:1.0.6'
         classpath "com.didichuxing.tools:droidassist:1.1.0"
         classpath "gradle.plugin.cn.cxzheng.methodTracePlugin:tracemanplugin:1.0.4"
 
@@ -44,6 +56,18 @@ buildscript {
 
 allprojects {
     repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/apache-snapshots'
+        }
         google()
         jcenter()
         mavenCentral()
